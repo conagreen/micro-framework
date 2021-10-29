@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group 'com.github.conagreen'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'org.eclipse.jetty', name: 'jetty-server', version: '9.4.31.v20200723'
+    implementation group: 'org.eclipse.jetty', name: 'jetty-servlet', version: '9.4.31.v20200723'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+test {
+    useJUnitPlatform()
+}
