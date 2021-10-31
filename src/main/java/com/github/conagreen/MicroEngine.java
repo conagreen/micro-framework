@@ -21,7 +21,7 @@ public class MicroEngine {
         }
 
         this.server = new Server(serverPort);
-        final HttpHandler handler = new HttpHandler(handlerMap);
+        final DispatcherHandler handler = new DispatcherHandler(handlerMap);
         this.server.setHandler(handler);
 
         try {

@@ -10,11 +10,12 @@ import javax.servlet.http.HttpServletResponseWrapper;
 import java.io.IOException;
 import java.util.Map;
 
-public class HttpHandler extends SessionHandler {
+// 스프링의 DispatcherServlet 모사한 모듈
+public class DispatcherHandler extends SessionHandler {
 
     private final Map<RequestKey, RequestHandler> handlerMap;
 
-    public HttpHandler(Map<RequestKey, RequestHandler> handlerMap) {
+    public DispatcherHandler(Map<RequestKey, RequestHandler> handlerMap) {
         this.handlerMap = handlerMap;
     }
 
